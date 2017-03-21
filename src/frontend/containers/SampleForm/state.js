@@ -101,7 +101,7 @@ module.exports = React.createClass({
 
         setTimeout(() => {
             this.setState(presets.empty)
-        }, 2000);
+        }, 10000);
     },
 
     render: function () {
