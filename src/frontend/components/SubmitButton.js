@@ -1,11 +1,10 @@
-import React from 'react';
-import cmz from 'cmz';
-
-const isSubmitting = cmz('font-color: lightgreen;');
+import React from "react";
+import { styles } from "../css/styles";
 
 module.exports = function SubmitButton(props) {
+    const buttonClass = props.success ? styles.button.success : styles.button.standard;
 
     return props.isSubmitting ?
-        <span className={isSubmitting}>Submitting ...</span> :
-        <button disabled={!props.canSubmit} onClick={props.onClick}>Submit</button>
-}
+        <span>Submitting ...</span> :
+        <button className={buttonClass} disabled={!props.canSubmit} onClick={props.onClick}>Submit</button>
+};
