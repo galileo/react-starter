@@ -11,9 +11,9 @@ module.exports = function SampleForm(props) {
 
     return <div>
         <form>
-            <input type="text" value={props.form.text}/>
-            <input type="checkbox" checked={props.form.checkbox.isChecked}/>
-            <SubmitButton canSubmit={canSubmit} isSubmitting={props.isSubmitting}/>
+            <input type="text" value={props.form.text} onChange={props.onTextChange}/>
+            <input type="checkbox" checked={props.form.checkbox.isChecked} onChange={props.onCheckboxChange}/>
+            <SubmitButton canSubmit={canSubmit} isSubmitting={props.isSubmitting} onClick={props.onSubmit}/>
         </form>
     </div>
 }
